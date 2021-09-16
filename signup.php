@@ -1,4 +1,4 @@
-<?php include "./actions/signupAction.php"  ?>
+<?php require "./actions/signupAction.php"  ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
