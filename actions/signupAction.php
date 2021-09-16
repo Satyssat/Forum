@@ -12,9 +12,23 @@ if (isset($_POST['validate'])) {
         $checkIfUserAlreadyExists->execute(array($user_pseudo));
 
         if ($checkIfUserAlreadyExists->rowCount() == 0) {
+            $inserUserOnWebsite = $bdd->prepare('INSERT INTO users(pseudo,nom,prenom,mdp)VALUES (?,?,?,?)');
+            $inserUserOnWebsite->execute(array($user_pseudo, $user_lastname, $user_firstname, $user_password));
+
+            $getInfosOfThisUserReq = $bdd->prepare('SELECT id, pseudo, nom, prenom FROM users WHERE nom = ? AND prenom = ? AND pseudo = ?');
+            $getInfosOfThisUserReq->execute(array($user_lastname, $user_firstname, $user_password));
+
+            $usersInfo = $getInfosOfThisUserReq->fetch();
+
+            $_SESSION['auth'] = true;
+            $_SESSION['id'] = $usersInfo['id'];
+            $_SESSION['pseudo'] = $usersInfo['pseudo'];
+            $_SESSION['lastname'] = $usersInfo['nom'];
+            $_SESSION['firstname'] = $usersInfo['prenom'];
+            $_SESSION['test'] = "sessionTestOk";
         } else {
 
-            $errorMsg = "L'utilisateur " + $user_pseudo + " existe déjà";
+            $errorMsg = "L'utilisateur existe déjà";
         }
     } else {
         $errorMsg = "Veuillez complétez tous les champs";

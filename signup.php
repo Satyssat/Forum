@@ -20,7 +20,7 @@ include "./includes/head.php";
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nom</label>
-            <input type="text" class="form-control" name="lestname">
+            <input type="text" class="form-control" name="lastname">
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Prénom</label>
