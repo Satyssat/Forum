@@ -1,3 +1,4 @@
+<?php include('actions/securityAction.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include './includes/head.php'; ?>
@@ -12,25 +13,18 @@
         } ?>
 
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Pseudo</label>
-            <input type="text" class="form-control" name="pseudo">
+            <label for="exampleInputEmail1" class="form-label">Titre de la question</label>
+            <input type="text" class="form-control" name="title">
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nom</label>
-            <input type="text" class="form-control" name="lastname">
+            <label for="exampleInputEmail1" class="form-label">Description de la question</label>
+            <textarea class="form-control" name="description"></textarea>
         </div>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Prénom</label>
-            <input type="text" class="form-control" name="firstname">
+            <label for="exampleInputEmail1" class="form-label">Contenu de la question</label>
+            <textarea class="form-control" name="content"></textarea>
         </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" name="password">
-        </div>
-        <button type="submit" class="btn btn-primary" name="validate">S'inscrire</button>
-        <a href="login.php">
-            <p>Je dispose d'un compte, je me connecte</p>
-        </a>
+        <button type="submit" class="btn btn-primary" name="validate">Publier la question</button>
     </form>
 </body>
 
