@@ -1,9 +1,6 @@
-<?php require "./actions/signupAction.php"  ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php
-include "./includes/head.php";
-?>
+<?php include './includes/head.php'; ?>
 
 <body>
     <br></br>
@@ -35,7 +32,6 @@ include "./includes/head.php";
             <p>Je dispose d'un compte, je me connecte</p>
         </a>
     </form>
-
 </body>
 
 </html>
