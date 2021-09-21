@@ -24,8 +24,8 @@ include("includes/head.php");
                 </h5>
                 <div class="card-body">
                     <p class="card-text"><?php echo $question['description']; ?></p>
-                    <a href="#" class="btn btn-info">Accéder à l'article</a>
-                    <a href="#" class="btn btn-warning">Modifier l'article</a>
+                    <a href="#" class="btn btn-info">Accéder à la question</a>
+                    <a href="#" class="btn btn-warning">Modifier la question</a>
                 </div>
             </div>
         <?php
