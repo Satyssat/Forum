@@ -1,6 +1,8 @@
 <?php
 include('actions/question/myQuestionsAction.php');
-include('actions/users/securityAction.php'); ?>
+include('actions/users/securityAction.php');
+// include('actions\question\getInfoOfEditedQuestionAction.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php
@@ -25,7 +27,8 @@ include("includes/head.php");
                 <div class="card-body">
                     <p class="card-text"><?php echo $question['description']; ?></p>
                     <a href="#" class="btn btn-info">Accéder à la question</a>
-                    <a href="#" class="btn btn-warning">Modifier la question</a>
+                    <a href="" class="btn btn-warning">Modifier la question</a>
+                    <!-- editQuestion.php?=<?= $questionId ?> -->
                 </div>
             </div>
         <?php

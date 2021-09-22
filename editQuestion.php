@@ -1,5 +1,5 @@
 <?php
-require('actions/question/editQuestionAction.php');
+require('actions\question\getInfoOfEditedQuestionAction.php');
 require('actions/users/securityAction.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,16 +23,16 @@ require('actions/users/securityAction.php'); ?>
             <form method="POST">
 
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"><?php $questionTitle ?></label>
-                    <input type="text" class="form-control" name="title">
+                    <label for="exampleInputEmail1" class="form-label">Titre de la question</label>
+                    <input type="text" class="form-control" name="title" value="<?= $questionTitle ?>">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Description de la question</label>
-                    <textarea class="form-control" name="description"></textarea>
+                    <textarea class="form-control" name="description"><?= $questionDescription ?></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Contenu de la question</label>
-                    <textarea class="form-control" name="content"></textarea>
+                    <textarea class="form-control" name="content"><?= $questionContent ?></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary" name="validate">Modifier la question</button>
