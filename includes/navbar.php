@@ -15,12 +15,25 @@
                 <li class="nav-item">
                     <a class="nav-link" href="publishQuestion.php">Publier une question</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./actions/users/logoutAction.php">Se déconnecter</a>
-                </li>
-                <span class="nav-item">
-                    <a class="nav-link"><?php echo $_SESSION['pseudo'] ?></a>
-                </span>
+                <?php
+                if (isset($_SESSION['auth'])) {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./actions/users/logoutAction.php">Se déconnecter</a>
+                    </li>
+                    <span class="nav-item">
+                        <a class="nav-link"><?php echo $_SESSION['pseudo'] ?></a>
+                    </span>
+                <?php
+                } else {
+                ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Se connecter</a>
+                    </li>
+                <?php
+                }
+                ?>
+
             </ul>
         </div>
     </div>

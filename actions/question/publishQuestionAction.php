@@ -27,7 +27,7 @@ if (isset($_POST['validate'])) {
                 $question_date
             )
         );
-
+        header('location: myQuestions.php');
         $successMsg = 'Votre question a bien été publiée sur le site';
     } else {
         $errorMsg = "Veuillez remplir tous les champs";

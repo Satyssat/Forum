@@ -21,8 +21,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
             $questionId = $questionInfo['id'];
 
 
-            $questionContent = str_replace("<br />", "", $questionContent);
             $questionDescription = str_replace("<br />", "", $questionDescription);
+            $questionContent = str_replace("<br />", "", $questionContent);
         } else {
             $errorMsg = "Vous ne pouvez pas modifier cette question";
         }
@@ -32,5 +32,3 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
 } else {
     $errorMsg = "Aucune queston n'a été trouvée";
 }
-// $getDataQuestion = $bdd->prepare('SELECT titre, description, contenu, date_publication FROM question where id_auteur = ?');
-// $getDataQuestion->execute(array($_SESSION['id']));

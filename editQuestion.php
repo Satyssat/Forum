@@ -1,6 +1,8 @@
 <?php
+require('actions/users/securityAction.php');
 require('actions\question\getInfoOfEditedQuestionAction.php');
-require('actions/users/securityAction.php'); ?>
+require('actions\question\editQuestionAction.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include('includes/head.php'); ?>
@@ -18,10 +20,14 @@ require('actions/users/securityAction.php'); ?>
         ?>
 
         <?php
-        if (isset($questionDate)) {
+        if (isset($questionContent)) {
         ?>
             <form method="POST">
 
+                <div class="badge bg-warning text-wrap text-secondary" style="width: 20em;">
+                    <h5>Date de publication : <?= $questionDate ?></h5>
+                </div>
+                <br></br>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Titre de la question</label>
                     <input type="text" class="form-control" name="title" value="<?= $questionTitle ?>">
