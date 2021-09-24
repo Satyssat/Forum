@@ -13,7 +13,7 @@ if (isset($_POST['validate'])) {
         $question_content = nl2br(htmlspecialchars($_POST['content']));
         $question_id_author = $_SESSION['id'];
         $question_pseudo_author = $_SESSION['pseudo'];
-        $question_date = date('d/m/y');
+        $question_date = date('d/m/y  H:i');
 
         // Insérer la question sur le site
         $insertQuestionOnWebsite = $bdd->prepare('INSERT INTO question(titre, description, contenu, id_auteur, pseudo_auteur,date_publication)VALUES(?,?,?,?,?,?)');

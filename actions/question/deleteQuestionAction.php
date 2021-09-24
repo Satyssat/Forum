@@ -12,8 +12,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
 
     if ($checkIfTheQuestionExist->rowCount() > 0) {
 
-        $userInfos = $checkIfTheQuestionExist->fetch();
-        if ($_SESSION['id'] == $userInfos['id_auteur']) {
+        $questionsInfos = $checkIfTheQuestionExist->fetch();
+        if ($_SESSION['id'] == $questionsInfos['id_auteur']) {
 
             $deleteQuestion = $bdd->prepare('DELETE FROM question where id = ?');
             $deleteQuestion->execute(array($_GET['id']));
