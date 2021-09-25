@@ -25,11 +25,11 @@ include("includes/head.php");
         ?>
             <div class="card">
                 <h5 class="card-header">
-                    <?php echo $question['titre']; ?>
+                    <a href="article.php?id=<?= $question['id']; ?>"> <?= $question['titre']; ?></a>
                 </h5>
                 <div class="card-body">
                     <p class="card-text"><?php echo $question['description']; ?></p>
-                    <a href="#" class="btn btn-info">Accéder à la question</a>
+                    <a href="article.php?id=<?= $question['id']; ?>" class=" btn btn-info">Accéder à la question</a>
                     <a href="editQuestion.php?id=<?= $question['id']; ?>" class="btn btn-warning">Modifier la question</a>
                     <a href="actions\question\deleteQuestionAction.php?id=<?= $question['id']; ?>" class="btn btn-danger">Supprimer la question</a>
                 </div>

@@ -23,8 +23,8 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
         $questionPublicationDate = $questionsInfos['date_publication'];
         $questionPseudoAuthor = $questionsInfos['pseudo_auteur'];
     } else {
-        echo "aucune question n'a été trouvée";
+        $errorMsg = "aucune question n'a été trouvée";
     }
 } else {
-    echo " Aucun article n' été trouvé";
+    $errorMsg = " Aucun article n' été trouvé";
 }
