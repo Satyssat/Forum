@@ -15,13 +15,11 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
         //Vérifier si c'est bien l'auteur de la question qui accède à la modification de la question
         if ($questionInfo['id_auteur'] == $_SESSION['id']) {
             $questionTitle = $questionInfo['titre'];
-            $questionDescription = $questionInfo['description'];
             $questionContent = $questionInfo['contenu'];
             $questionDate = $questionInfo['date_publication'];
             $questionId = $questionInfo['id'];
 
 
-            $questionDescription = str_replace("<br />", "", $questionDescription);
             $questionContent = str_replace("<br />", "", $questionContent);
         } else {
             $errorMsg = "Vous ne pouvez pas modifier cette question";

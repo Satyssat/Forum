@@ -22,7 +22,7 @@
                         <a class="nav-link" href="./actions/users/logoutAction.php">Se déconnecter</a>
                     </li>
                     <span class="nav-item">
-                        <a class="nav-link"><?php echo $_SESSION['pseudo'] ?></a>
+                        <a href="profile.php" class="nav-link"><?php echo $_SESSION['pseudo'] ?></a>
                     </span>
                 <?php
                 } else {

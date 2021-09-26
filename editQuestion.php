@@ -33,10 +33,6 @@ require('actions\question\editQuestionAction.php');
                     <input type="text" class="form-control" name="title" value="<?= $questionTitle ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Description de la question</label>
-                    <textarea class="form-control" name="description"><?= $questionDescription ?></textarea>
-                </div>
-                <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Contenu de la question</label>
                     <textarea class="form-control" name="content"><?= $questionContent ?></textarea>
                 </div>

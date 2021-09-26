@@ -35,9 +35,6 @@ require('actions/question/showAllQuestionsAction.php');
                 <div class="card-header">
                     <a href="article.php?id=<?= $question['id']; ?>"> <?= $question['titre']; ?></a>
                 </div>
-                <div class="card-body"><?= $question['description']; ?>
-
-                </div>
                 <div class="card-footer"><?= $question['pseudo_auteur']; ?> le <?= $question['date_publication']; ?>
 
                 </div>

@@ -19,7 +19,7 @@ include("includes/head.php");
     <div class="container">
 
         <?php
-        // On affiche autant de question avec titre description contenu et id( pour modifier) 
+        // On affiche autant de question avec titre contenu et id( pour modifier) 
         // qu'il y en a dans la bdd selon l'auteur
         while ($question = $getAllMyQuestions->fetch()) {
         ?>
@@ -28,7 +28,6 @@ include("includes/head.php");
                     <a href="article.php?id=<?= $question['id']; ?>"> <?= $question['titre']; ?></a>
                 </h5>
                 <div class="card-body">
-                    <p class="card-text"><?php echo $question['description']; ?></p>
                     <a href="article.php?id=<?= $question['id']; ?>" class=" btn btn-info">Accéder à la question</a>
                     <a href="editQuestion.php?id=<?= $question['id']; ?>" class="btn btn-warning">Modifier la question</a>
                     <a href="actions\question\deleteQuestionAction.php?id=<?= $question['id']; ?>" class="btn btn-danger">Supprimer la question</a>
